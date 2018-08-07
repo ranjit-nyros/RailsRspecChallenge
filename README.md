@@ -1,20 +1,5 @@
-Railsrspec
+Rails Rspec Challenge
 ================
-
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
 
 Ruby on Rails
 -------------
@@ -23,26 +8,26 @@ This application requires:
 
 - Ruby 2.4.1
 - Rails 5.2.0
+- PostgreSql
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
+CHALLENGE
+---------
+-  Clone the repository from git ​
+   https://github.com/ranjit-nyros/RailsRspecChallenge​
+​-  Install and configure the rails application​
+-  Add Rspec related gems , bundle it and configure Rspec in application
+-  Implement model specs 
+    validation specs
+    creating/updating records spec
+    instance method specs
+-  Implement controller specs 
+    CRUD specs
+    Non CRUD specs        
+-  Implement feature specs 
+    User Signup
+    User Login
+    Event Creation with authenticated user
+-  At least one spec should be written in types of specs covered in Seminar ​
+-  Cover all the required matchers and expectation methods in Rspec
+-  Practice with Request Specs
+-  Commit your changes under your branch 
