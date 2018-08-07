@@ -13,7 +13,8 @@ This application requires:
 CHALLENGE
 ---------
 -  Clone the repository from git ​
-   https://github.com/ranjit-nyros/RailsRspecChallenge​
+   https://github.com/ranjit-nyros/RailsRspecChallenge
+   
 ​-  Install and configure the rails application​
 -  Add Rspec related gems , bundle it and configure Rspec in application
 -  Implement model specs 
