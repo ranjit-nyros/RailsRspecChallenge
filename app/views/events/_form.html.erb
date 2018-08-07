@@ -1,0 +1,89 @@
+<%= form_with(model: event, local: true, :html => { :role => 'form'}) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= form.hidden_field :user_id, value: current_user.id  %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'form-control'  %>
+  </div>
+  <div class="form-group">
+    <%= form.label :event_category %>
+    <%= form.select :event_category, options_for_select(CATEGORY_TYPES,@event.event_category), {}, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :begin_time %>
+    <%= form.time_select :begin_time, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :location %>
+    <%= form.text_area :location, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :entry_type %>
+    <%= form.select :entry_type, options_for_select(ENTRY_TYPES,@event.entry_type), {}, {class: "form-control"} %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :hosted_by %>
+    <%= form.text_field :hosted_by, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contact_person %>
+    <%= form.text_field :contact_person, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contact_email %>
+    <%= form.email_field :contact_email, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :mobile_number %>
+    <%= form.text_field :mobile_number, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :chief_guest %>
+    <%= form.text_field :chief_guest, class: 'form-control'  %>
+  </div>
+
+
+
+
+  <div class="actions">
+    <%= form.submit :class => 'btn btn-primary right' %>
+  </div>
+<% end %>
+<br/>

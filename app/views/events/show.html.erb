@@ -1,0 +1,90 @@
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @event.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @event.end_date %>
+</p>
+
+<p>
+  <strong>Begin time:</strong>
+  <%= @event.begin_time.strftime("%H:%M %P") %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @event.end_time.strftime("%H:%M %P") %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Entry type:</strong>
+  <%= @event.entry_type %>
+</p>
+
+<p>
+  <strong>Hosted by:</strong>
+  <%= @event.hosted_by %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @event.contact_person %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @event.contact_email %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @event.mobile_number %>
+</p>
+
+<p>
+  <strong>Chief guest:</strong>
+  <%= @event.chief_guest %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @event.status %>
+</p>
+
+<p>
+  <strong>Event category:</strong>
+  <%= @event.event_category %>
+</p>
+
+
+<h2>  Comments</h2>
+
+<%= form_for(:comment,  url: add_comment_event_path, html: { role: 'form'}) do |f| %>
+  <%= f.hidden_field :user_id , class: 'form-control' , value: current_user.id%>
+  <%= f.hidden_field :event_id , class: 'form-control' , value: @event.id%>
+  <p>Comment: </p>
+  <%= f.text_area :comment , class: 'form-control' , required: true %>
+  <%= f.submit "Comment" %>
+<% end %>
+<hr>
+ <% @event.comments.each do |c| %>
+ <p><%= c.comment %></p>
+ <% end %>
+ <br/>
